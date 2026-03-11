@@ -1,16 +1,13 @@
-﻿@using NSE.WebApp.MVC.Extensions
-@inject IUser AppUser
+﻿@using NSE.WebAPI.Core.User
+@using NSE.WebApp.MVC.Extensions
+@inject IAspNetUser AppUser
 
 @if (AppUser.EstaAutenticado())
 {
     <div>
-        <!-- Ícone do carrinho -->
-        <a class="widget-header mr-3 carrinho-icon">
-            <div class="icon icon-sm rounded-circle bg-white">
-                <i class="fa fa-shopping-cart"></i>
-            </div>
-            <span class="notify">0</span>
-        </a>
+        <vc:carrinho></vc:carrinho>
+    </div>
+    <div>
         <div class="dropdown d-inline-block">
             <a href="#" class="icontext dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 <img class="icon icon-sm rounded-circle" src="https://s.gravatar.com/avatar/@this.HashEmailForGravatar(AppUser.ObterUserEmail())?d=mm&s=45">

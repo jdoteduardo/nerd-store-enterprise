@@ -29,7 +29,7 @@ namespace NSE.Catalogo.API.Controllers
             return Ok(produtos);
         }
 
-        [ClaimsAuthorize("Catalogo", "Ler")]
+        //[ClaimsAuthorize("Catalogo", "Ler")]
         [HttpGet("catalogo/produtos/{id}")]
         public async Task<ActionResult<Produto>> GetProdutoPorId(Guid id)
         {

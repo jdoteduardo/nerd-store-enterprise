@@ -14,11 +14,11 @@ namespace NSE.WebApp.MVC.Models
     {
         public string Title { get; set; }
         public int Status { get; set; }
-        public ResponseErrorMessage Errors { get; set; }
+        public ResponseErrorMessage Errors { get; set; } = new ResponseErrorMessage();
     }
 
     public class ResponseErrorMessage
     {
-    public List<string> Mensagens { get; set; }
-}
+    public List<string> Mensagens { get; set; } = new List<string>();
+    }
 }
